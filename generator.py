@@ -1,20 +1,17 @@
 import argparse
 
 from loguru import logger
-from exampleGenerators.problem1008 import generate1008
+from exampleGenerators import Generators
 
 
 def main():
-    generator = {
-        1008: generate1008,
-    }
     opts = readOpts()
 
-    if not generator.get(opts.code, False):
+    if not Generators.get(opts.code, False):
         logger.error(f"generator for code {opts.code} does not exist")
         return
 
-    generator[opts.code](opts.num)
+    Generators[opts.code](opts.num)
     logger.info(f"successfully generated test examples for problem with code {opts.code}")
 
 def readOpts() -> argparse.Namespace:
