@@ -1,7 +1,7 @@
 #!/bin/bash
 # Test Program Files with examples
 #
-# Usage: ./init.sh code name
+# Usage: ./test.sh code name
 # ----------------------------------------
 
 ################################################################
