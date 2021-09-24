@@ -59,4 +59,10 @@ fi
 #------------------------------
 # Create the code file
 #------------------------------
+if [ -e ./codes/${problemCode}_${problemName}.cpp ];
+then
+    echo "ERROR: File has been created"
+    exit 1;
+fi
+
 cp ./codes/template.cpp ./codes/${problemCode}_${problemName}.cpp
