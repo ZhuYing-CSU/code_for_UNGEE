@@ -1,0 +1,6 @@
+# ignore unused files
+workspace.code-workspace
+
+# ignore unnecessary folders
+exampleGenerators
+examples
