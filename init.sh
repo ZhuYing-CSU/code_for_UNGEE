@@ -59,10 +59,10 @@ fi
 #------------------------------
 # Create the code file
 #------------------------------
-if [ -e ./codes/${problemCode}_${problemName}.c];
+if [ -e ./codes/${problemCode}_${problemName}.c ];
 then
     echo "ERROR: File has been created"
     exit 1;
 fi
 
-cp ./codes/template.c./codes/${problemCode}_${problemName}.c
+cp ./codes/template.c ./codes/${problemCode}_${problemName}.c
