@@ -65,7 +65,7 @@ programFileName=${programFile%.c}
 # Generate test examples
 #------------------------------
 echo $testNum
-if [ $(python generator.py -c ${problemCode} -n ${testNum}) ];
+if [ $(python ./utils/generator.py -c ${problemCode} -n ${testNum}) ];
 then
     exit 1;
 fi
