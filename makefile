@@ -1,3 +1,5 @@
+num := 100;
+
 init:
 ifndef code
 	${error Argument "code" is missing}
@@ -13,5 +15,4 @@ test:
 ifndef code
 	${error Argument "code" is missing}
 endif
-
-	@./test.sh -c ${code}
+	@./test.sh -c ${code} -n ${num}

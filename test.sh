@@ -15,6 +15,7 @@ Help(){
     echo "Options:"
     echo "-h    display this help menu"
     echo "-c    problem code"
+    echo "-n    the number of test example(s)"
 }
 
 ################################################################
@@ -24,7 +25,7 @@ Help(){
 #-----------------------------------------
 # Read options from stdin
 #-----------------------------------------
-while getopts c:h: option;
+while getopts c:n:h: option;
 do
     case $option in
         h) # display Help
@@ -32,6 +33,8 @@ do
             exit;;
         c) # init problem code
             problemCode=$OPTARG;;
+        n) # init problem code
+            testNum=$OPTARG;;
         \?) # display error message
             echo "Error: Invalid option"
             exit 1;
@@ -47,6 +50,11 @@ then
     exit 1;
 fi
 
+if [ -z $testNum ];
+then
+    testNum=100
+fi
+
 #------------------------------
 # Find the relevant problem
 #------------------------------
@@ -56,7 +64,8 @@ programFileName=${programFile%.c}
 #------------------------------
 # Generate test examples
 #------------------------------
-if [ $(python generator.py -c $problemCode) ];
+echo $testNum
+if [ $(python generator.py -c ${problemCode} -n ${testNum}) ];
 then
     exit 1;
 fi
