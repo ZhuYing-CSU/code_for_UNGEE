@@ -1,6 +1,6 @@
 # ignore unused files
 workspace.code-workspace
-codes/template.cpp
+codes/template.c
 
 # ignore unnecessary folders
 exampleGenerators

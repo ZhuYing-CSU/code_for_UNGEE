@@ -51,7 +51,7 @@ fi
 # Find the relevant problem
 #------------------------------
 programFile=$(find ./codes -name "${problemCode}*")
-programFileName=${programFile%.cpp}
+programFileName=${programFile%.c}
 
 #------------------------------
 # Generate test examples
@@ -64,6 +64,6 @@ fi
 #------------------------------
 # Test the code file
 #------------------------------
-gcc  $programFile -o ${programFileName}.out # compile the code file
+cc  $programFile -o ${programFileName}.out # compile the code file
 cat ./examples/${problemCode}.txt | ${programFileName}.out # test the program 
 rm ${programFileName}.out # clean the executable file
