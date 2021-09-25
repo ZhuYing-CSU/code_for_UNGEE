@@ -5,3 +5,4 @@
 ## 目前已有问题
 
 - [1008 数组右移问题 (solved)](https://mp.weixin.qq.com/s/cX3uPUE9-9c9FRMMVPvMAA)
+- [1010 一元多项式求导 (solved)](https://mp.weixin.qq.com/s/jSBNT-IN4mDWNmXRQLWSdw)
