@@ -58,13 +58,12 @@ fi
 #------------------------------
 # Find the relevant problem
 #------------------------------
-programFile=$(find ./codes -name "${problemCode}*")
+programFile=$(find ./codes -name "${problemCode}*.c")
 programFileName=${programFile%.c}
 
 #------------------------------
 # Generate test examples
 #------------------------------
-echo $testNum
 if [ $(python ./utils/generator.py -c ${problemCode} -n ${testNum}) ];
 then
     exit 1;
